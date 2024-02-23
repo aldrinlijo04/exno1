@@ -47,6 +47,12 @@ data.isnull().sum().sum()
 ```
 # Result
 
+![image](https://github.com/aldrinlijo04/exno1/assets/118544279/88b65592-25fc-4591-8a05-a21b213fa238)
+
+
+![image](https://github.com/aldrinlijo04/exno1/assets/118544279/a4fa7709-cab0-48c7-95a1-dff645113e57)
+
+
  ![image](https://github.com/aldrinlijo04/exno1/assets/118544279/2542129d-4099-4b98-8b5e-fd12fedc95d8)
 
 
