@@ -21,6 +21,35 @@ STEP 5: Remove outliers using IQR
 STEP 6: Use zscore of to remove outliers
 
 # Coding and Output
-            <<include your coding and its corressponding output screen shots here>>
+## PROGRAM:
+```
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+data = pd.read_csv("/content/SAMPLEIDS.csv")
+data.head()
+data = pd.get_dummies(data)
+data.isnull().sum()
+columns_with_null = data.columns[data.isnull().any()]
+
+### VISUALIZATION:
+import seaborn as sns
+plt.figure(figsize=(10,10))
+sns.barplot(columns_with_null)
+plt.title("NULL VALUES")
+plt.show()
+
+### NULL IMPUTATION
+for column in columns_with_null:
+    median = data[column].median()  
+    data[column].fillna(median, inplace=True)
+data.isnull().sum().sum()
+```
 # Result
-          <<include your Result here>>
+
+ ![image](https://github.com/aldrinlijo04/exno1/assets/118544279/2542129d-4099-4b98-8b5e-fd12fedc95d8)
+
+
+![image](https://github.com/aldrinlijo04/exno1/assets/118544279/fd6fe5f9-d90a-4063-bd4b-978cfb6e3b09)
+
+
